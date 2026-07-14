@@ -1,0 +1,17 @@
+.git/
+.github/
+.gitignore
+.assetsignore
+wrangler.jsonc
+LICENSE
+OWNER_GUIDE.md
+.DS_Store
+.deps/
+.deps312/
+.venv-imagegen/
+output/
+tmp/
+avatar-placeholder.svg
+background-video.mp4
+bottom style Background Removed.png
+kling_20260609_作品_cycled_ani_154_0.mp4
