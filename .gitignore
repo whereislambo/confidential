@@ -1,0 +1,6 @@
+.DS_Store
+.deps/
+.deps312/
+.venv-imagegen/
+output/
+tmp/

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidential Drop</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="Confidential file drop">
+      <div class="stars" aria-hidden="true"></div>
+      <img class="bottom-style" src="./bottom style.png" alt="" aria-hidden="true" />
+
+      <section class="audio-dock" aria-label="Audio player">
+        <div class="audio-shell">
+          <div class="audio-label">
+            <span id="audioName">AUDIO.WAV</span>
+            <div class="audio-track" id="audioBars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <button class="icon-button audio-button" id="audioButton" type="button" aria-label="Mute audio">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 9v6h4l5 4V5L8 9H4Z"></path>
+              <path d="M17 9.5a4 4 0 0 1 0 5"></path>
+              <path class="mute-slash" d="M19 5 5 19"></path>
+            </svg>
+          </button>
+          <audio id="audioPlayer" autoplay preload="auto"></audio>
+        </div>
+      </section>
+
+      <section class="signup-screen" id="signupScreen" aria-label="Email registration">
+        <div class="avatar-mark" aria-hidden="true">
+          <img src="./avatar-portrait.png" alt="" />
+        </div>
+
+        <form class="signup-form" id="signupForm">
+          <label class="email-shell" for="emailInput">
+            <input id="emailInput" type="email" placeholder="Enter your email" autocomplete="email" />
+            <button class="submit-button" type="submit" aria-label="Continue to files">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </label>
+        </form>
+      </section>
+
+      <section class="browser-window is-hidden" id="fileManager" aria-label="File manager">
+        <header class="window-top">
+          <div class="window-dots" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="tab-title">Confidential</div>
+          <button class="plain-button" type="button" aria-label="Add tab">+</button>
+        </header>
+
+        <div class="address-row">
+          <nav class="nav-icons" aria-label="Navigation controls">
+            <button class="tool-button" type="button" aria-label="Back">
+              <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button class="tool-button" type="button" aria-label="Forward">
+              <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <button class="tool-button" type="button" aria-label="Up">
+              <svg viewBox="0 0 24 24"><path d="m7 14 5-5 5 5"></path></svg>
+            </button>
+            <button class="tool-button" type="button" aria-label="Refresh">
+              <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66"></path><path d="M20 4v6h-6"></path></svg>
+            </button>
+          </nav>
+          <div class="address-box">CONFIDENTIAL</div>
+          <button class="tool-button cart-button" type="button" aria-label="Cart">
+            <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 8H8L6 3H3"></path><path d="M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path><path d="M18 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path></svg>
+          </button>
+          <label class="search-box" for="searchInput">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35"></path><circle cx="11" cy="11" r="7"></circle></svg>
+            <input id="searchInput" type="search" placeholder="Search" />
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"></path><path d="M12 2v3m0 14v3M4.93 4.93l2.12 2.12m9.9 9.9 2.12 2.12M2 12h3m14 0h3M4.93 19.07l2.12-2.12m9.9-9.9 2.12-2.12"></path></svg>
+          </label>
+        </div>
+
+        <div class="toolbar">
+          <button class="tool-button" id="startSlideshow" type="button" aria-label="Start slideshow" title="Start slideshow">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m10 9 5 3-5 3Z"></path></svg>
+          </button>
+          <button class="tool-button" type="button" aria-label="Copy">
+            <svg viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="1"></rect><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"></path></svg>
+          </button>
+          <button class="tool-button" type="button" aria-label="Folder">
+            <svg viewBox="0 0 24 24"><path d="M3 6h7l2 2h9v10H3Z"></path></svg>
+          </button>
+          <button class="tool-button" type="button" aria-label="Share">
+            <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 10.6 6.8-4.2m-6.8 7 6.8 4.2"></path></svg>
+          </button>
+          <button class="tool-button" type="button" aria-label="Info">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 10v6m0-9h.01"></path></svg>
+          </button>
+          <button class="tool-button toolbar-more" type="button" aria-label="More">
+            <svg viewBox="0 0 24 24"><path d="M5 12h.01M12 12h.01M19 12h.01"></path></svg>
+          </button>
+        </div>
+
+        <div class="window-body">
+          <aside class="sidebar" aria-label="Categories">
+            <button class="eject-button" id="ejectButton" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 10H4Z"></path><path d="M4 18h16"></path></svg>
+              EJECT
+            </button>
+            <div class="side-heading">
+              <span>Categories</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"></path></svg>
+            </div>
+            <button class="side-item active" type="button" data-category="confidential">
+              <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h6l2 2h9v9.5a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2Z"></path></svg>
+              Confidential
+            </button>
+            <button class="side-item" type="button" data-category="vault">
+              <svg class="category-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+              Vault
+            </button>
+          </aside>
+
+          <div class="file-pane">
+            <div class="file-grid" id="fileGrid" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <footer class="status-row">
+          <span id="itemCount">4 items</span>
+          <nav aria-label="Legal">
+            <a href="#">Terms and Conditions</a>
+            <span>|</span>
+            <a href="#">Privacy Policy</a>
+          </nav>
+        </footer>
+      </section>
+
+      <section class="slideshow is-hidden" id="slideshow" role="dialog" aria-modal="true" aria-labelledby="slideName">
+        <button class="slideshow-backdrop" id="slideshowBackdrop" type="button" aria-label="Close slideshow"></button>
+        <div class="slideshow-frame">
+          <div class="slideshow-topbar">
+            <span id="slidePosition" aria-live="polite"></span>
+            <button class="slideshow-close" id="slideshowClose" type="button" aria-label="Close slideshow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+            </button>
+          </div>
+          <div class="slide-content" id="slideContent"></div>
+          <div class="slideshow-footer">
+            <button class="slide-nav-button" id="slidePrevious" type="button" aria-label="Previous file">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <span id="slideName"></span>
+            <button class="slide-nav-button" id="slideNext" type="button" aria-label="Next file">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
